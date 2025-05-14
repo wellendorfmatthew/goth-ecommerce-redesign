@@ -1,27 +1,32 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(0, 0%, 0%);
+  --default-font: var(--font-gothic-a1)
 }
 
-@theme inline {
+@theme {
+  /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-separator: 	hsl(213, 15%, 88%);
+  --color-searchbar: hsl(210, 4%, 91%)
+  /* Fonts */
+  --font-logo: var(--font-risque);
+  --font-primary: var(--default-font);
+  /* Font Sizes */
+  --text-large: 2em;
+  --text-medium: 1.5em;
+  --text-small: 1em;
+  /* Beakpoints */
+  --breakpoint-tablet: 63.75em;
+  --breakpoint-mobile: 41.25em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+html {
+  height: 100vh;
+  width: 100vw;
 }
