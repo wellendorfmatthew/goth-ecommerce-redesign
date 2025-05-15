@@ -1,6 +1,6 @@
-import { HeaderConfig } from "../types";
+import { NavConfig } from "../types";
 
-export const headerConfig: HeaderConfig = {
+export const navConfig: NavConfig = {
     logo: "Ethereal",
     links: [
         {
