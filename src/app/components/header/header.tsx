@@ -1,18 +1,18 @@
 import { ShoppingCart } from "lucide-react";
 import { Search } from "lucide-react";
 import { UserRound } from "lucide-react";
-import { headerConfig } from "../../../../config/header";
-import { HeaderConfig } from "../../../../types";
+import { navConfig } from "../../../../config/nav";
+import { NavConfig } from "../../../../types";
 import { Menu } from "lucide-react";
 import Link from "next/link";
 
 export default function Header() {
     return (
             <div className="flex items-center justify-between w-full px-12 py-4 gap-16 outline-separator outline-1">
-                <h1 className="text-large font-(family-name:--font-risque) ">{headerConfig.logo}</h1>
+                <h1 className="text-large font-(family-name:--font-risque) ">{navConfig.logo}</h1>
                 <div className="flex items-center justify-center gap-8 max-tablet:hidden">
                     {
-                        headerConfig.links.map((link, index) => (
+                        navConfig.links.map((link, index) => (
                             <Link key={index} href={link.href} className="font-medium">{link.name}</Link>
                         ))
                     }
