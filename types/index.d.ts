@@ -8,11 +8,33 @@ export type NavConfig = {
 export type FooterConfig = {
     links: NavLinks[],
     icons: NavLinks[],
-    copyright: string
+    copyright: string,
 }
 
 export type NavLinks = {
     name: string,
     href: string,
-    icon?: StaticImageData
+    icon?: StaticImageData,
+}
+
+export type Hero = {
+    src: StaticImageData,
+    alt: string,
+    category?: string,
+}
+
+export type MainHero = {
+    heros: Hero[],
+}
+
+export type Product = {
+    name: string,
+    category: string,
+    price: string,
+    src: StaticImageData,
+}
+
+export type ProductSection = {
+    products: Product[],
+    hero: Hero[],
 }
