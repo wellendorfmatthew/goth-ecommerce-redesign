@@ -34,6 +34,10 @@ export type Product = {
     src: StaticImageData,
 }
 
+export type Products = {
+    products: Product[],
+}
+
 export type ProductSection = {
     products: Product[],
     hero: Hero[],
