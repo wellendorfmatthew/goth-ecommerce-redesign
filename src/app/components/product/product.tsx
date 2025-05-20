@@ -1,19 +1,26 @@
 "use client"
 
-import { Card } from "flowbite-react";
+import { Card, Button } from "flowbite-react";
 import { Product } from "../../../../types";
 import Image from "next/image";
+import { ThemeProvider, } from "flowbite-react";
+import { cardTheme } from "../themes/themes";
+import { buttonTheme } from "../themes/themes";
 
 type ProductProp = {
     product: Product;
 }
 
-export default function Products({ product }: ProductProp) {
+export default function ProductCard({ product }: ProductProp) {
     return (
-        <Card className="flex flex-col gap-4 items-center justify-center" renderImage={() => <Image src={product.src} alt={product.name} />}>
-            <p>{product.name}</p>
-            <p>{product.price}</p>
-            <button>Add to Cart</button>
-        </Card>
+        <ThemeProvider theme={cardTheme}>
+            <Card className="text-center rounded-none border-none shadow-none" renderImage={() => <Image src={product.image} alt={product.name} />}>
+                <p className="font-(family-name:--font-gothic-a1) font-bold">{product.name}</p>
+                <p className="font-(family-name:--font-gothic-a1) font-semibold">{product.price}</p>
+                <ThemeProvider theme={buttonTheme}>
+                    <Button color={"dark"} className="bg-black outline-none text-small text-white" size="lg">Add to Cart</Button>
+                </ThemeProvider>
+            </Card>
+        </ThemeProvider>
     )
 }
