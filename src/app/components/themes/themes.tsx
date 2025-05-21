@@ -4,7 +4,7 @@ export const cardTheme = createTheme({
     card: {
         root: {
             base: "flex rounded-lg border border-gray-200 bg-white shadow-md dark:border-gray-700 dark:bg-gray-800",
-            children: "flex h-full flex-col justify-center gap-4 p-6 bg-white",
+            children: "flex h-full flex-col justify-center gap-2 p-6 bg-white",
             horizontal: {
             off: "flex-col",
             on: "flex-col md:max-w-xl md:flex-row"
@@ -56,7 +56,7 @@ export const cardTheme = createTheme({
 
     export const buttonTheme = createTheme({
         button: {
-            base: "relative flex items-center justify-center rounded-lg text-center focus:outline-none",
+            base: "relative flex items-center justify-center text-center focus:outline-none",
             disabled: "pointer-events-none opacity-50",
             fullSized: "w-full",
             grouped: "rounded-none border-l-0 first:rounded-s-lg first:border-l last:rounded-e-lg focus:ring-2",
@@ -64,7 +64,7 @@ export const cardTheme = createTheme({
             size: {
                 xs: "h-8 px-3 text-xs",
                 sm: "h-9 px-3 text-sm",
-                md: "h-10 px-5 text-sm",
+                md: "h-12 px-5 w-[125px] text-base",
                 lg: "h-12 px-5 text-base",
                 xl: "h-[52px] px-6 text-base"
             },
@@ -73,7 +73,8 @@ export const cardTheme = createTheme({
                 alternative: "border border-gray-200 bg-white text-gray-900 hover:bg-gray-100 hover:text-primary-700 focus:ring-gray-100 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700",
                 blue: "bg-blue-700 text-white hover:bg-blue-800 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800",
                 cyan: "bg-cyan-700 text-white hover:bg-cyan-800 focus:ring-cyan-300 dark:bg-cyan-600 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800",
-                dark: "bg-gray-950 text-white hover:bg-gray-900",
+                dark: "bg-gray-950 text-white hover:brightness-100",
+                black: "bg-black text-white hover:bg-zinc-800",
                 gray: "bg-gray-700 text-white hover:bg-gray-800 focus:ring-gray-300 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800",
                 green: "bg-green-700 text-white hover:bg-green-800 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800",
                 indigo: "bg-indigo-700 text-white hover:bg-indigo-800 focus:ring-indigo-300 dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:ring-indigo-800",

@@ -13,7 +13,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-separator: 	hsl(213, 15%, 88%);
-  --color-searchbar: hsl(210, 4%, 91%)
+  --color-searchbar: hsl(210, 4%, 91%);
   /* Fonts */
   --font-logo: var(--font-risque);
   --font-primary: var(--default-font);

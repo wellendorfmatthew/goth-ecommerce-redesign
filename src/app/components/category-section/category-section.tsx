@@ -10,7 +10,7 @@ type ProductsProp = {
 export default function CategorySection({ products }: ProductsProp) {
     return (
         <div className="flex flex-col w-full">
-            <div className="grid grid-cols-4 w-full gap-2 py-2">
+            <div className="grid grid-cols-4 w-full gap-2 py-2 max-tablet:grid-cols-2">
                 {
                     products.products.map((product, index) => (
                         <ProductCard product={product} key={index} />
