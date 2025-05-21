@@ -18,9 +18,9 @@ export type NavLinks = {
 }
 
 export type Hero = {
-    src: StaticImageData,
-    alt: string,
-    category?: string,
+    image: StaticImageData,
+    altText: string,
+    category?: Category,
 }
 
 export type MainHero = {
@@ -29,12 +29,20 @@ export type MainHero = {
 
 export type Product = {
     name: string,
-    category: string,
+    category: Category,
     price: string,
-    src: StaticImageData,
+    image: StaticImageData,
+}
+
+export type Products = {
+    products: Product[],
+    category?: Category,
+    hero?: Hero
 }
 
 export type ProductSection = {
     products: Product[],
     hero: Hero[],
 }
+
+export type Category = "Dresses" | "Shoes";
