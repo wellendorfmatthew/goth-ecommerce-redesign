@@ -86,6 +86,8 @@ export const cardTheme = createTheme({
                 teal: "bg-teal-700 text-white hover:bg-teal-800 focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800",
                 yellow: "bg-yellow-400 text-white hover:bg-yellow-500 focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-400 dark:focus:ring-yellow-900",
                 transparent: "bg-white text-black active:ring-0 active:outline-none",
+                dropdown: "bg-white text-black active:ring-0 active:outline-none",
+                dropdownItem: "bg-white text-black active:ring-0 active:outline-none",
             },
             outlineColor: {
                 default: "border border-primary-700 text-primary-700 hover:border-primary-800 hover:bg-primary-800 hover:text-white focus:ring-primary-300 dark:border-primary-600 dark:text-primary-500 dark:hover:border-primary-700 dark:hover:bg-primary-700 dark:hover:text-white dark:focus:ring-primary-800",
@@ -101,7 +103,9 @@ export const cardTheme = createTheme({
                 red: "border border-red-700 text-red-700 hover:border-red-800 hover:bg-red-800 hover:text-white focus:ring-red-300 dark:border-red-600 dark:text-red-500 dark:hover:border-red-700 dark:hover:bg-red-700 dark:hover:text-white dark:focus:ring-red-800",
                 teal: "border border-teal-700 text-teal-700 hover:border-teal-800 hover:bg-teal-800 hover:text-white focus:ring-teal-300 dark:border-teal-600 dark:text-teal-400 dark:hover:border-teal-700 dark:hover:bg-teal-700 dark:hover:text-white dark:focus:ring-teal-800",
                 yellow: "border border-yellow-400 text-yellow-400 hover:border-yellow-500 hover:bg-yellow-500 hover:text-white focus:ring-yellow-300 dark:border-yellow-300 dark:text-yellow-300 dark:hover:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-white dark:focus:ring-yellow-900",
-                transparent: ""
+                transparent: "",
+                dropdown: "",
+                dropdownItem: ""
             }
         }
     })
@@ -187,7 +191,7 @@ export const cardTheme = createTheme({
     export const dropdownTheme = createTheme({
         dropdown: {
             arrowIcon: "ml-2 h-4 w-4",
-            content: "py-1 focus:outline-none",
+            content: "py-1 focus:outline-none bg-white text-black",
             floating: {
                 animation: "transition-opacity",
                 arrow: {
@@ -210,9 +214,9 @@ export const cardTheme = createTheme({
                 icon: "mr-2 h-4 w-4"
                 },
                 style: {
-                dark: "bg-white text-white dark:bg-gray-700",
+                dark: "bg-white text-black dark:bg-white",
                 light: "border border-gray-200 bg-white text-gray-900",
-                auto: "border border-gray-200 bg-white text-gray-900 dark:border-none dark:bg-gray-700 dark:text-white"
+                auto: "border bg-white text-gray-900 dark:border-none dark:bg-white dark:text-black"
                 },
                 target: "w-fit"
             },

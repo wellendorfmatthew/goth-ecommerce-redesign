@@ -57,3 +57,9 @@ export type Filter = {
     options: FilterOption[],
 }
 
+export type Content = {
+    title: string,
+    subtitle?: string,
+    image?: StaticImageData,
+    text: string[]
+}

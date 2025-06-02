@@ -24,11 +24,11 @@ export default function FilterDrawer() {
                         <p className="text-medium font-semibold">Filters & Sort</p>
                         <X onClick={handleClose} className="cursor-pointer" />
                     </div>
-                    <DrawerItems className="flex items-center justify-center w-98/100">
-                        <Dropdown label="Featured" className="w-full flex items-center justify-between">
+                    <DrawerItems className="flex items-center justify-center w-98/100 outline-2">
+                        <Dropdown label="Featured" color={"dropdown"} className="w-full flex items-center justify-between">
                             {
                                 featuredFilters.options.map((filter, index) => (
-                                    <DropdownItem key={index} className="">{filter.filter}</DropdownItem>
+                                    <DropdownItem key={index} color={"dropdownItem"}>{filter.filter}</DropdownItem>
                                 ))
                             }
                         </Dropdown>
