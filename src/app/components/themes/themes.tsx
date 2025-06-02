@@ -56,7 +56,7 @@ export const cardTheme = createTheme({
 
     export const buttonTheme = createTheme({
         button: {
-            base: "relative flex items-center justify-center text-center focus:outline-none",
+            base: "relative flex items-center justify-center text-center focus:outline-none active:outline-none",
             disabled: "pointer-events-none opacity-50",
             fullSized: "w-full",
             grouped: "rounded-none border-l-0 first:rounded-s-lg first:border-l last:rounded-e-lg focus:ring-2",
@@ -84,7 +84,10 @@ export const cardTheme = createTheme({
                 purple: "bg-purple-700 text-white hover:bg-purple-800 focus:ring-purple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800",
                 red: "bg-red-700 text-white hover:bg-red-800 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800",
                 teal: "bg-teal-700 text-white hover:bg-teal-800 focus:ring-teal-300 dark:bg-teal-600 dark:hover:bg-teal-700 dark:focus:ring-teal-800",
-                yellow: "bg-yellow-400 text-white hover:bg-yellow-500 focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-400 dark:focus:ring-yellow-900"
+                yellow: "bg-yellow-400 text-white hover:bg-yellow-500 focus:ring-yellow-300 dark:bg-yellow-600 dark:hover:bg-yellow-400 dark:focus:ring-yellow-900",
+                transparent: "bg-white text-black active:ring-0 active:outline-none",
+                dropdown: "bg-white text-black active:ring-0 active:outline-none",
+                dropdownItem: "bg-white text-black active:ring-0 active:outline-none",
             },
             outlineColor: {
                 default: "border border-primary-700 text-primary-700 hover:border-primary-800 hover:bg-primary-800 hover:text-white focus:ring-primary-300 dark:border-primary-600 dark:text-primary-500 dark:hover:border-primary-700 dark:hover:bg-primary-700 dark:hover:text-white dark:focus:ring-primary-800",
@@ -99,7 +102,124 @@ export const cardTheme = createTheme({
                 purple: "border border-purple-700 text-purple-700 hover:border-purple-800 hover:bg-purple-800 hover:text-white focus:ring-purple-300 dark:border-purple-600 dark:text-purple-400 dark:hover:border-purple-700 dark:hover:bg-purple-700 dark:hover:text-white dark:focus:ring-purple-800",
                 red: "border border-red-700 text-red-700 hover:border-red-800 hover:bg-red-800 hover:text-white focus:ring-red-300 dark:border-red-600 dark:text-red-500 dark:hover:border-red-700 dark:hover:bg-red-700 dark:hover:text-white dark:focus:ring-red-800",
                 teal: "border border-teal-700 text-teal-700 hover:border-teal-800 hover:bg-teal-800 hover:text-white focus:ring-teal-300 dark:border-teal-600 dark:text-teal-400 dark:hover:border-teal-700 dark:hover:bg-teal-700 dark:hover:text-white dark:focus:ring-teal-800",
-                yellow: "border border-yellow-400 text-yellow-400 hover:border-yellow-500 hover:bg-yellow-500 hover:text-white focus:ring-yellow-300 dark:border-yellow-300 dark:text-yellow-300 dark:hover:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-white dark:focus:ring-yellow-900"
+                yellow: "border border-yellow-400 text-yellow-400 hover:border-yellow-500 hover:bg-yellow-500 hover:text-white focus:ring-yellow-300 dark:border-yellow-300 dark:text-yellow-300 dark:hover:border-yellow-400 dark:hover:bg-yellow-400 dark:hover:text-white dark:focus:ring-yellow-900",
+                transparent: "",
+                dropdown: "",
+                dropdownItem: ""
             }
+        }
+    })
+
+    export const drawerTheme = createTheme({
+        drawer: {
+            root: {
+                base: "fixed z-40 overflow-y-auto bg-white p-4 transition-transform dark:bg-white",
+                backdrop: "fixed inset-0 z-30 bg-gray-900/50 dark:bg-gray-900/80",
+                edge: "bottom-16",
+                position: {
+                top: {
+                    on: "left-0 right-0 top-0 w-full transform-none",
+                    off: "left-0 right-0 top-0 w-full -translate-y-full"
+                },
+                right: {
+                    on: "right-0 top-0 h-screen w-80 transform-none",
+                    off: "right-0 top-0 h-screen w-80 translate-x-full"
+                },
+                bottom: {
+                    on: "bottom-0 left-0 right-0 w-full transform-none",
+                    off: "bottom-0 left-0 right-0 w-full translate-y-full"
+                },
+                left: {
+                    on: "left-0 top-0 h-screen w-80 transform-none",
+                    off: "left-0 top-0 h-screen w-80 -translate-x-full"
+                }
+                }
+            },
+            header: {
+                inner: {
+                closeButton: "absolute end-2.5 top-2.5 flex h-8 w-8 items-center justify-center rounded-lg bg-transparent text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white",
+                closeIcon: "h-4 w-4",
+                titleCloseIcon: "sr-only",
+                titleIcon: "me-2.5 h-0 w-0",
+                titleText: "mb-0 inline-flex items-center font-semibold dark:text-black dark:text-[24px]"
+                },
+                collapsed: {
+                on: "hidden",
+                off: "block"
+                }
+            },
+            items: {
+                base: ""
+            }
+        }
+    })
+
+    export const accordionTheme = createTheme({
+        accordion: {
+            root: {
+                base: "divide-y divide-gray-200 border-gray-200 dark:divide-gray-700 dark:border-gray-700",
+                flush: {
+                off: "rounded-lg border",
+                on: "border-b"
+                }
+            },
+            content: {
+                base: "p-5 first:rounded-t-lg last:rounded-b-lg dark:bg-gray-900"
+            },
+            title: {
+                arrow: {
+                base: "h-6 w-6 shrink-0",
+                open: {
+                    off: "",
+                    on: "rotate-180"
+                }
+                },
+                base: "flex w-full items-center justify-between p-5 text-left font-medium text-gray-500 first:rounded-t-lg last:rounded-b-lg dark:text-gray-400",
+                flush: {
+                off: "hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 dark:hover:bg-gray-800 dark:focus:ring-gray-800",
+                on: "bg-transparent dark:bg-transparent"
+                },
+                heading: "",
+                open: {
+                off: "",
+                on: "bg-gray-100 text-gray-900 dark:bg-gray-800 dark:text-white"
+                }
+            }
+        }
+    })
+
+    export const dropdownTheme = createTheme({
+        dropdown: {
+            arrowIcon: "ml-2 h-4 w-4",
+            content: "py-1 focus:outline-none bg-white text-black",
+            floating: {
+                animation: "transition-opacity",
+                arrow: {
+                base: "absolute z-10 h-2 w-2 rotate-45",
+                style: {
+                    dark: "bg-gray-900 dark:bg-gray-700",
+                    light: "bg-white",
+                    auto: "bg-white dark:bg-gray-700"
+                },
+                placement: "-4px"
+                },
+                base: "z-10 w-fit divide-y divide-gray-100 rounded shadow focus:outline-none",
+                content: "py-1 text-sm text-gray-700 dark:text-gray-200",
+                divider: "my-1 h-px bg-gray-100 dark:bg-gray-600",
+                header: "block px-4 py-2 text-sm text-gray-700 dark:text-gray-200",
+                hidden: "invisible opacity-0",
+                item: {
+                container: "",
+                base: "flex w-full cursor-pointer items-center justify-start px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none dark:text-gray-200 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:bg-gray-600 dark:focus:text-white",
+                icon: "mr-2 h-4 w-4"
+                },
+                style: {
+                dark: "bg-white text-black dark:bg-white",
+                light: "border border-gray-200 bg-white text-gray-900",
+                auto: "border bg-white text-gray-900 dark:border-none dark:bg-white dark:text-black"
+                },
+                target: "w-fit"
+            },
+            inlineWrapper: "flex items-center"
         }
     })

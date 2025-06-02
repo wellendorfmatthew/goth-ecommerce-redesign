@@ -46,3 +46,20 @@ export type ProductSection = {
 }
 
 export type Category = "Dresses" | "Shoes";
+
+export type FilterOption = {
+    filter: string,
+    stock?: number,
+}
+
+export type Filter = {
+    name: string,
+    options: FilterOption[],
+}
+
+export type Content = {
+    title: string,
+    subtitle?: string,
+    image?: StaticImageData,
+    text: string[]
+}
