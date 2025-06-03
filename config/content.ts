@@ -14,8 +14,7 @@ export const aboutContent: Content = {
 export const contactContent: Content = {
     title: "Contact Us",
     text: [
-        `If you have any questions, please fill out the form below and 
-        we will get back to you as soon as we can! Our customer service hours are Mon-Friday 10am-5pm, excluding holidays.`,
+        `If you have any questions, please fill out the form below and we will get back to you as soon as we can! Our customer service hours are Mon-Friday 10am-5pm, excluding holidays.`,
     ],
 }
 
