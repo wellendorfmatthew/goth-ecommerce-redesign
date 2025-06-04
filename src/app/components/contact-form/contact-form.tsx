@@ -4,7 +4,7 @@ import { textInputTheme, textAreaTheme, buttonTheme } from "../themes/themes";
 
 export default function ContactForm() {
     return (
-        <div className="w-1/2 flex flex-col gap-8  ">
+        <div className="w-1/2 flex flex-col gap-8">
             <ThemeProvider theme={textInputTheme}>
                 <div className="flex flex-col gap-2">
                     <Label htmlFor="name" className="text-black dark:text-black font-semibold dark:font-semibold text-small">Name</Label>
